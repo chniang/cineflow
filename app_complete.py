@@ -77,7 +77,10 @@ def insert_ticket(prix, date_achat, id_client, id_projection):
             'id_client': int(id_client),
             'id_projection': int(id_projection)
         })
-        return res.lastrowid if hasattr(res, "lastrowid") else None
+        ticket_id = res.lastrowid if hasattr(res, "lastrowid") else None
+    run_query.clear()
+    get_table.clear()
+    return ticket_id
 
 # -------------------------
 # LANDING PAGE
