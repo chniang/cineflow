@@ -33,7 +33,8 @@ git checkout --orphan hf-deploy
 git rm -rf .
 git checkout main -- app_complete.py style.css requirements.txt \
     init_db.py tidiane_flix.db tidiane_flix.sql .streamlit/ Dockerfile \
-    .gitignore README.md
+    .gitignore
+# README.md NON copié depuis main — créer manuellement avec le bloc YAML ci-dessous
 git commit -m "chore(hf): deploy"
 git push hf hf-deploy:main --force
 git checkout main
@@ -44,9 +45,10 @@ git checkout main
 ```bash
 git checkout hf-deploy
 
-# Récupérer les fichiers app modifiés depuis main (sans images/)
+# README.md exclu : il reste fixe sur hf-deploy pour préserver le bloc YAML HF.
+# Le copier depuis main écraserait le frontmatter et provoquerait "Configuration error".
 git checkout main -- app_complete.py style.css requirements.txt \
-    init_db.py tidiane_flix.db .streamlit/ Dockerfile .gitignore README.md
+    init_db.py tidiane_flix.db .streamlit/ Dockerfile .gitignore
 
 git add .
 git commit -m "chore(hf): sync from main $(git rev-parse --short main)"
@@ -59,23 +61,20 @@ git checkout main
 
 ---
 
-## Avertissement HF (non bloquant)
+## YAML frontmatter HF (déjà appliqué sur hf-deploy)
 
-Le push affiche un warning jaune :
-```
-Warning: empty or missing yaml metadata in repo card
-```
-C'est parce que le README.md n'a pas de bloc YAML frontmatter HF.
-L'app tourne normalement. Pour le supprimer, ajouter en tête du README :
+Le fichier `README.md` sur `hf-deploy` commence par ce bloc — ne pas l'écraser :
+
 ```yaml
 ---
 title: CineFlow
 emoji: 🎬
 colorFrom: red
-colorTo: black
-sdk: streamlit
-sdk_version: "1.28"
-app_file: app_complete.py
+colorTo: purple
+sdk: docker
 pinned: false
 ---
 ```
+
+`sdk: docker` car le projet utilise un Dockerfile (pas le runner Streamlit natif HF).
+Ce bloc est absent du README sur `main` — il est spécifique à la branche `hf-deploy`.
