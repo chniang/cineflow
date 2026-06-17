@@ -3,7 +3,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![SQL](https://img.shields.io/badge/SQL-SQLite-green.svg)](https://www.sqlite.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.40+-red.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -26,7 +26,7 @@ Application web professionnelle pour la gestion complète d'un cinéma :
 - **Système de réservation** : Interface intuitive pour vente de tickets
 - **Gestion clients** : Base de 20 clients avec historique d'achats
 - **Analytics avancés** : Statistiques de fréquentation, revenus, films populaires
-- **Système d'avis** : Notation et commentaires clients (1-5 étoiles)
+- **Données d'avis en base** (consultables via la page SQL brut)
 
 **Technologies :** SQLite + Python Streamlit + Interface responsive style Netflix
 
@@ -138,8 +138,8 @@ pip
 ### Installation
 ```bash
 # Cloner le repo
-git clone https://github.com/chniang/TIDIANE_FLIX.git
-cd TIDIANE_FLIX
+git clone https://github.com/chniang/cineflow.git
+cd cineflow
 
 # Installer les dépendances
 pip install -r requirements.txt
@@ -153,7 +153,7 @@ streamlit run app_complete.py
 2. **Catalogue** : Consulter les films disponibles
 3. **Réservations** : Acheter des tickets pour les séances
 4. **Analytics** : Visualiser statistiques de fréquentation et revenus
-5. **Gestion** : CRUD complet sur clients, films, séances
+5. **Gestion** : Consultation et réservation en temps réel
 
 ---
 
