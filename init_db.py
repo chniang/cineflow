@@ -225,7 +225,7 @@ def build():
 
     con.close()
 
-    print("\n=== BASE RECRÉÉE — TIDIANE FLIX ===")
+    print("\n=== BASE RECREE — CINEFLOW ===")
     print(f"  Chemin : {DB_PATH}")
     print()
     print("  Enregistrements insérés :")

@@ -1,5 +1,5 @@
 ﻿/* ========================================
-   TIDIANEFLIX - RESPONSIVE CSS
+   CINEFLOW - RESPONSIVE CSS
    ======================================== */
 
 /* Fix page d'accueil mobile */
@@ -18,7 +18,7 @@
         overflow-x: hidden !important;
     }
     
-    /* Fix titre page d'accueil TIDIANEFLIX */
+    /* Fix titre page d'accueil CINEFLOW */
     h1[style*="color: #E50914"],
     h1[style*="text-align: center"] {
         font-size: 2rem !important;

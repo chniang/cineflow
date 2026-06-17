@@ -12,7 +12,7 @@ import sqlite3
 # -------------------------
 
 st.set_page_config(
-    page_title="TidianeFlix",
+    page_title="CineFlow",
     page_icon="🎬",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -157,7 +157,7 @@ def show_landing_page():
 
     st.markdown("""
     <div class="hero">
-        <div class="hero-title">🎬 TIDIANEFLIX</div>
+        <div class="hero-title">🎬 CINEFLOW</div>
         <div class="hero-subtitle">Votre cinéma premium à Dakar</div>
         <p style="color: #b3b3b3; font-size: 18px; max-width: 600px; margin: 0 auto 40px;">
             Vivez une expérience cinématographique incomparable avec les derniers blockbusters,
@@ -240,10 +240,10 @@ def show_landing_page():
 
     st.markdown("""
     <div class="custom-footer">
-        <p><strong>TidianeFlix</strong> - Cinéma Premium Dakar</p>
+        <p><strong>CineFlow</strong> - Cinéma Premium Dakar</p>
         <p>📍 Dakar, Sénégal | 📞 +221 77 636 27 14 | 📧 cheikhniang159@gmail.com</p>
         <p style="margin-top: 20px; font-size: 14px;">
-            © 2025 TidianeFlix. Tous droits réservés.<br>
+            © 2025 CineFlow. Tous droits réservés.<br>
             Développé avec ❤️ par Cheikh Niang
         </p>
     </div>
@@ -254,7 +254,7 @@ def show_landing_page():
 # -------------------------
 
 def sidebar_navigation():
-    st.sidebar.title('🎬 TidianeFlix')
+    st.sidebar.title('🎬 CineFlow')
     st.sidebar.markdown("---")
     
     if st.sidebar.button("🏠 Retour à l'accueil", use_container_width=True):
@@ -270,7 +270,7 @@ def sidebar_navigation():
     return page
 
 def show_header():
-    st.title('🎬 TidianeFlix — Tableau de bord')
+    st.title('🎬 CineFlow — Tableau de bord')
     st.write('Interface complète pour la gestion de billetterie cinéma.')
 
 def page_dashboard():

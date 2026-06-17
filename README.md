@@ -1,4 +1,4 @@
-﻿# 🎬 TidianeFlix
+﻿# 🎬 CineFlow
 ### Système Complet de Gestion de Cinéma avec Base de Données Relationnelle
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
