@@ -4,6 +4,8 @@ from sqlalchemy import create_engine, text
 import plotly.express as px
 from pathlib import Path
 from datetime import datetime
+import re
+import sqlite3
 
 # -------------------------
 # CONFIGURATION
@@ -53,8 +55,12 @@ def run_query(query, params=None):
         df = pd.read_sql(text(query), conn, params=params)
     return df
 
+_ALLOWED_TABLES = {"client", "film", "salle", "projection", "ticket", "avis"}
+
 @st.cache_data(ttl=60)
 def get_table(table_name, limit=1000):
+    if table_name not in _ALLOWED_TABLES:
+        raise ValueError(f"Table non autorisée : {table_name!r}")
     q = f"SELECT * FROM {table_name} LIMIT :limit"
     return run_query(q, {'limit': limit})
 
@@ -787,11 +793,16 @@ def page_sql_raw():
     st.header("🛠️ SQL brut")
     sql = st.text_area("Requête SELECT", height=150)
     if st.button("▶️ Exécuter", type="primary"):
-        if not sql.strip().lower().startswith("select"):
-            st.error("⚠️ Uniquement SELECT autorisé.")
+        s = sql.strip()
+        if not s.lower().startswith("select"):
+            st.error("⚠️ Uniquement les requêtes SELECT sont autorisées.")
+        elif re.search(r';\s*\S', s):
+            st.error("⚠️ Requêtes empilées interdites (';' détecté).")
         else:
             try:
-                df = run_query(sql)
+                con = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
+                df = pd.read_sql_query(s, con)
+                con.close()
                 st.dataframe(df, use_container_width=True)
             except Exception as e:
                 st.error(f"❌ Erreur: {e}")
