@@ -6,6 +6,7 @@ WORKDIR /app
 COPY requirements.txt .
 COPY app_complete.py .
 COPY tidiane_flix.db .
+COPY style.css .
 COPY .streamlit ./.streamlit
 
 # Installer les dépendances
