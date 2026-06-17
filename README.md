@@ -61,7 +61,7 @@ AVIS (id_avis, note, commentaire, date_avis, id_client, id_film)
 - **15 films** (Inception, Titanic, Avengers, Interstellar, Matrix, etc.)
 - **3 salles** (120, 80, 150 places)
 - **20 projections** planifiées sur 10 jours
-- **30 tickets** vendus (revenus : 105 000 FCFA)
+- **30 tickets** vendus (revenus : 103 000 FCFA)
 - **10 avis clients** avec notes et commentaires
 
 ---
@@ -182,10 +182,10 @@ streamlit run app_complete.py
 
 ### Insights Découverts (Données actuelles)
 
-- **Film le plus populaire** : Avengers Endgame (3 réservations)
-- **Jour de pointe** : Vendredi et Samedi (60% des ventes)
-- **Prix moyen ticket** : 3 500 FCFA
-- **Taux de remplissage moyen** : 28% (optimisable via stratégie marketing)
+- **Film le plus populaire** : Avengers: Endgame (4 réservations, 14 500 FCFA de revenus)
+- **Jour de pointe** : Vendredi (9 tickets sur 30, soit 30% des ventes)
+- **Prix moyen ticket** : 3 433 FCFA
+- **Taux de remplissage moyen** : 9,2% (optimisable via stratégie marketing)
 
 ---
 
