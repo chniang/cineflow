@@ -13,5 +13,5 @@ build/
 .git/
 .gitignore
 Model_Conceptuel et logique.pdf
-tidiane_flix.sql
+cineflow.sql
 .DS_Store

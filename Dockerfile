@@ -5,7 +5,7 @@ WORKDIR /app
 # Copier les fichiers nécessaires
 COPY requirements.txt .
 COPY app_complete.py .
-COPY tidiane_flix.db .
+COPY cineflow.db .
 COPY style.css .
 COPY .streamlit ./.streamlit
 

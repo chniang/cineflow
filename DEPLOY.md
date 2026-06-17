@@ -32,7 +32,7 @@ aucun historique, aucun blob PNG dans le pack.
 git checkout --orphan hf-deploy
 git rm -rf .
 git checkout main -- app_complete.py style.css requirements.txt \
-    init_db.py tidiane_flix.db tidiane_flix.sql .streamlit/ Dockerfile \
+    init_db.py cineflow.db cineflow.sql .streamlit/ Dockerfile \
     .gitignore
 # README.md NON copié depuis main — créer manuellement avec le bloc YAML ci-dessous
 git commit -m "chore(hf): deploy"
@@ -48,7 +48,7 @@ git checkout hf-deploy
 # README.md exclu : il reste fixe sur hf-deploy pour préserver le bloc YAML HF.
 # Le copier depuis main écraserait le frontmatter et provoquerait "Configuration error".
 git checkout main -- app_complete.py style.css requirements.txt \
-    init_db.py tidiane_flix.db .streamlit/ Dockerfile .gitignore
+    init_db.py cineflow.db .streamlit/ Dockerfile .gitignore
 
 git add .
 git commit -m "chore(hf): sync from main $(git rev-parse --short main)"

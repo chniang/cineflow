@@ -1,5 +1,5 @@
 """
-init_db.py — Recrée tidiane_flix.db en SQLite natif.
+init_db.py — Recrée cineflow.db en SQLite natif.
 Remplace le dump phpMyAdmin/MariaDB (ENGINE=InnoDB, backticks, ALTER TABLE ADD CONSTRAINT)
 par un schéma 100 % compatible SQLite.
 
@@ -13,7 +13,7 @@ Corrections appliquées :
 import sqlite3
 import os
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "tidiane_flix.db")
+DB_PATH = os.path.join(os.path.dirname(__file__), "cineflow.db")
 
 
 # ── Schéma SQLite natif ────────────────────────────────────────────────────────

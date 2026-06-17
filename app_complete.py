@@ -37,7 +37,7 @@ if 'show_landing' not in st.session_state:
     st.session_state.show_landing = True
 
 # Utiliser SQLite
-DB_PATH = Path(__file__).parent / "tidiane_flix.db"
+DB_PATH = Path(__file__).parent / "cineflow.db"
 SQLALCHEMY_URL = f"sqlite:///{DB_PATH}"
 
 # -------------------------
