@@ -6,7 +6,6 @@
 |---------|------------------------------------------------------|---------------------------|
 | origin  | https://github.com/chniang/cineflow.git              | Code source complet       |
 | hf      | https://huggingface.co/spaces/TIJAANI/cineflow       | Space Streamlit (prod)    |
-| space   | https://huggingface.co/spaces/TIJAANI/tidiane-flix-test | Space de test          |
 
 ---
 
