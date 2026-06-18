@@ -27,3 +27,8 @@ Thumbs.db
 .streamlit/secrets.toml
 screenshots/
 *.pdf
+
+# Playwright / Node (screenshot tooling)
+node_modules/
+package-lock.json
+capture_screenshots.js

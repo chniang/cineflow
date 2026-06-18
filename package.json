@@ -1,0 +1,24 @@
+{
+  "name": "cineflow",
+  "version": "1.0.0",
+  "description": "[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)\r [![SQL](https://img.shields.io/badge/SQL-SQLite-green.svg)](https://www.sqlite.org/)\r [![Streamlit](https://img.shields.io/badge/Streamlit-1.40+-red.svg)](https://streamlit.io/)\r [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chniang/cineflow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chniang/cineflow/issues"
+  },
+  "homepage": "https://github.com/chniang/cineflow#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0"
+  }
+}
