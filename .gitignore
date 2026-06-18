@@ -23,6 +23,10 @@ env/
 .DS_Store
 Thumbs.db
 
+# Secrets / variables d'environnement
+.env
+*.env
+
 # Streamlit
 .streamlit/secrets.toml
 screenshots/
