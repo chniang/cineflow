@@ -105,8 +105,9 @@ LIMIT 5;
 **2. Taux de remplissage par salle :**
 ```sql
 SELECT s.nom_salle, s.capacite,
+       COUNT(DISTINCT p.id_projection) as nb_projections,
        COUNT(t.id_ticket) as tickets_vendus,
-       ROUND(COUNT(t.id_ticket) * 100.0 / s.capacite, 2) as taux_remplissage
+       ROUND(COUNT(t.id_ticket) * 100.0 / (s.capacite * COUNT(DISTINCT p.id_projection)), 2) as taux_remplissage
 FROM salle s
 JOIN projection p ON s.id_salle = p.id_salle
 LEFT JOIN ticket t ON p.id_projection = t.id_projection
@@ -185,7 +186,7 @@ streamlit run app_complete.py
 - **Film le plus populaire** : Avengers: Endgame (4 réservations, 14 500 FCFA de revenus)
 - **Jour de pointe** : Vendredi (9 tickets sur 30, soit 30% des ventes)
 - **Prix moyen ticket** : 3 433 FCFA
-- **Taux de remplissage moyen** : 9,2% (optimisable via stratégie marketing)
+- **Taux de remplissage moyen** : 1,3% (tickets vendus / places totales disponibles sur toutes les séances)
 
 ---
 
